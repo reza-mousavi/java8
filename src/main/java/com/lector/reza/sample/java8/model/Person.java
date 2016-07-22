@@ -1,15 +1,25 @@
 package com.lector.reza.sample.java8.model;
 
+import java.io.Serializable;
+import java.util.List;
+
 /**
  * Created by Reza Mousavi reza.mousavi@lector.dk on 7/21/2016
  */
-public class Person {
+public class Person implements Serializable{
+
     private String name;
     private int age;
+    private List<Car> carList;
 
     public Person(String name, int age) {
+        this(name, age, null);
+    }
+
+    public Person(String name, int age, List<Car> cars) {
         this.name = name;
         this.age = age;
+        this.carList = cars;
     }
 
     public String getName() {
@@ -18,6 +28,10 @@ public class Person {
 
     public boolean isElderly() {
         return age > 44;
+    }
+
+    public List<Car> getCarList() {
+        return carList;
     }
 
     public int getAge() {
