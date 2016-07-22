@@ -8,7 +8,6 @@
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>Java8 Test Application</name>
-    <url>http://www.lector.com</url>
 
     <prerequisites>
         <maven>2.0.6</maven>
